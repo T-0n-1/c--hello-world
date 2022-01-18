@@ -1,17 +1,18 @@
-#include <iostream> // C++ i/o stream header
+#include <iostream>
 #include <string>
 using namespace std;
 
-void yourName();
+string yourName();
 
-int main() {    // C/C++ project can have only one main function
-    yourName();
+int main() {
+    string fullName = yourName();
+    cout << "Hello " << fullName << endl;
     return 0;
 }
 
-void yourName() {
+string yourName() {
     cout << "Enter your name: ";
     string fullName;
     getline(cin, fullName);
-    cout << "Hello " << fullName << endl;
+    return fullName;
 }
