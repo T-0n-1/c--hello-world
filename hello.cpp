@@ -3,10 +3,13 @@
 using namespace std;
 
 string yourName();
+string scandinavianChars();
 
 int main() {
     string fullName = yourName();
-    cout << "Hello " << fullName << endl;
+    string fName = scandinavianChars();
+    cout << "Hello " << fullName << endl << endl;
+    cout << fName << endl;
     return 0;
 }
 
@@ -15,4 +18,9 @@ string yourName() {
     string fullName;
     getline(cin, fullName);
     return fullName;
+}
+
+string scandinavianChars() {
+    char fName[20] = "Äiti Rösberg";
+    return fName;
 }
